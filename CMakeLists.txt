@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Fetch shared UWP deps
 FetchContent_Declare(UwpLibs
     GIT_REPOSITORY https://github.com/worleydl/uwp-dep.git
-    GIT_TAG ca105888b71480d74bc9ebcaeec6d7a9b32a49f3
+    GIT_TAG adbcfbb6448ea9a9b7375b39508af20ff25ae6c7
 )
 FetchContent_MakeAvailable(UwpLibs)
 
@@ -19,11 +19,8 @@ project(raylib-uwp LANGUAGES CXX)
 set_directory_properties(PROPERTIES VS_STARTUP_PROJECT ${PROJECT_NAME})
 
 add_executable(${PROJECT_NAME} WIN32
-	src/mainloop.cpp
-	src/miniapp.cpp
+	src/main.cpp
 )
-
-target_compile_options(${PROJECT_NAME} PRIVATE /ZW)
 
 set(DEPS_ROOT ${CMAKE_BINARY_DIR}/_deps/uwplibs-src/x64)
 
