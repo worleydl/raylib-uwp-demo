@@ -5,7 +5,7 @@ This project showcases how to setup and run raylib on UWP, please note it's curr
 
 ## Overview
 
-The `miniapp` calls InitWindow then fires off calls to `uwp::tick()` until the window is closed.
+Application logic lives inside of `main.cpp::bootstrap`, a minimum application wrapper is provided by libuwp.  If you need customizations you must implement your own.
 
 ## Dependencies
 - raylib
