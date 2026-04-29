@@ -14,9 +14,11 @@ int bootstrap()
 	}
 
 	CloseWindow();
+
+	return 0;
 }
 
 int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR argv, int argc)
 {
-	uwp_main(bootstrap);
+	return uwp_main(bootstrap);
 }
